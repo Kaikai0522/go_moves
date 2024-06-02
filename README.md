@@ -29,7 +29,7 @@ View → Show Game Tree<br>
 ### 3. 設定圍棋引擎
 點擊Attach Engine按鈕(播放按鈕) → Manages Engines → Add → 設置引擎 → Close (Close後會自動儲存)
 
-**如使用虛擬環境安裝套件，則python路徑為虛擬環境python路徑 ex: "C:\Users\88697\anaconda3\envs\{env_name}\python.exe"**
+**如使用虛擬環境安裝套件，則python路徑為虛擬環境python路徑 ex: "C:\Users\88697\anaconda3\envs\\{env_name}\python.exe"**
 ![設定引擎](./images/設定引擎.png)
 
 ### 4. 選擇圍棋引擎
