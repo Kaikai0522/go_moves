@@ -732,7 +732,7 @@ def predict_next_move(color):
 
 def initial():
     global dan_model
-    dan_model = load_model(FOLDER_PATH + '/pro/model_PRO.h5')
+    dan_model = load_model(FOLDER_PATH + '/model_Dan.h5')
     # 開始分析可以下的位置
     predict_next_move(BLACK)
     return
