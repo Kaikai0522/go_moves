@@ -17,6 +17,11 @@ cd go_moves
 pip install -r requirements.txt
 ```
 
+到以下網址下載模型：https://drive.google.com/file/d/1mcl2pfXWZuq5kCN0BmI0HfPFNcmveBdP/view?usp=sharing
+<br>
+並新建一個資料夾取名為models，將下載的模型放到資料夾中。
+![show_engines_sidebar](./images/檔案.png)
+
 ## 下載Sabaki
 https://sabaki.yichuanshen.de/
 
