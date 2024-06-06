@@ -721,11 +721,10 @@ def predict_next_move(color):
     next_move_string = 'C['
     for i in range(20):
         top_x, top_y = next_chess[0][i] % 19, next_chess[0][i] // 19
-        if prediction[0][[next_chess[0][i]]] > 0.01:
-            if i != 0:
-                next_move_string = next_move_string + ', '
-            next_move_string = next_move_string + f'Top{i + 1}:{numbertochar[top_y]}{numbertochar[top_x]}({prediction[0][next_chess[0][i]] * 100:.2f}%)'
-        top_20_move[i] = [coords_19x19[(top_x + 1) * 21 + top_y + 1], prediction[0][[next_chess[0][i]]] * 100]
+        if i != 0:
+            next_move_string = next_move_string + ', '
+        next_move_string = next_move_string + f'Top{i + 1}:{numbertochar[top_y]}{numbertochar[top_x]}({prediction[0][next_chess[0][i]]:.4f})'
+        top_20_move[i] = [coords_19x19[(top_x + 1) * 21 + top_y + 1], prediction[0][[next_chess[0][i]]]]
     top5.update_queue.put((top5.show_top5, (top_20_move, top_20_move)))
     next_move_string = next_move_string + ']'
     return next_move_string
