@@ -34,25 +34,22 @@ def new_board():
     sgf_string = '(;SZ[19]'
     for i in range(20):
         str = ''
-        if i < 10:
+        if i < 9:
             str = '  - '
         else:
             str = ' - '
-        canvas.itemconfig(top_20[i], text = 'top ' + f'{i + 1}' + str + '-- , --%')
+        canvas.itemconfig(top_20[i], text = 'top ' + f'{i + 1}' + str + '-- , --')
     return
 
 def show_top5(pos, percent):
     global top_20
     for i in range (20):
         str = ''
-        if i < 10:
+        if i < 9:
             str = '  - '
         else:
             str = ' - '
-        if percent[i][1][0] > 1:
-            canvas.itemconfig(top_20[i], text = 'Top ' + f'{i + 1}' + str + f'{pos[i][0]}' + ', ' + f'{percent[i][1][0]:.2f}' + '%')
-        else:
-            canvas.itemconfig(top_20[i], text = 'Top ' + f'{i + 1}' + str + '--, --%')
+        canvas.itemconfig(top_20[i], text = 'Top ' + f'{i + 1}' + str + f'{pos[i][0]}' + ', ' + f'{percent[i][1][0]:.4f}')
     return
 
 def destroy_window():
