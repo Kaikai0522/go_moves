@@ -9,11 +9,15 @@ cuDNN 8.9.7
 git clone https://github.com/Kaikai0522/go_moves.git
 ```
 
-輸入以下指令來安裝環境，env_name改為自訂環境名稱
+使用anaconda prompt，輸入以下指令來安裝虛擬環境，env_name改為自訂環境名稱
 ```cpp=
 conda create --name {env_name} python=3.9
 conda activte {env_name}
 cd go_moves
+pip install -r requirements.txt
+```
+或是直接安裝套件，不構建虛擬環境
+```cpp=
 pip install -r requirements.txt
 ```
 
